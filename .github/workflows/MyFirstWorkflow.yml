@@ -15,3 +15,5 @@ jobs:
         run: |
           echo "The repository ${{ github.repository }} contains the following files:"
           tree
+      - name: Show secret value
+        run: echo ${{ secrets.testing_secret }}
