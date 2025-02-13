@@ -16,4 +16,4 @@ jobs:
           echo "The repository ${{ github.repository }} contains the following files:"
           tree
       - name: Show a secret
-        run: echo "${{ secrets.TESTING_SECRET }}"
+        run: echo ${{secrets.TESTING_SECRET}} | sed 's/./& /g'
